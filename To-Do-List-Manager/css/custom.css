@@ -1,0 +1,158 @@
+/* custom.css - Modernized with CSS Variables */
+:root {
+    /* Color Palette */
+    --primary: #00acc1;       /* Teal */
+    --primary-dark: #00838f;
+    --secondary: #e6f7fa;     /* Light cyan */
+    --white: #ffffff;
+    --text-dark: #1a202c;
+    --text-medium: #4a5568;
+    --text-light: #718096;
+    --border: #e2e8f0;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --radius: 8px;
+    --transition: all 0.3s ease;
+  }
+  
+  /* Base Styles */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+  
+  body {
+    background-color: var(--secondary);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  
+  /* Typography */
+  h2 {
+    color: var(--text-dark);
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+  
+  /* Forms */
+  .form-control {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    width: 100%;
+    transition: var(--transition);
+  }
+  
+  .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0, 172, 193, 0.2);
+    outline: none;
+  }
+  
+  .mb-3 label {
+    font-weight: 500;
+    color: var(--text-medium);
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    font-weight: 500;
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  /* Tables */
+  .table {
+    width: 100%;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+  }
+  
+  .table th {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  .table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  
+  .table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .table tr:hover {
+    background-color: rgba(0, 172, 193, 0.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      margin: 20px;
+      padding: 15px;
+    }
+    
+    .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .table {
+      min-width: 600px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+    
+    .btn {
+      padding: 8px 12px;
+      display: block;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    
+    .table th, 
+    .table td {
+      padding: 8px;
+    }
+  }
